@@ -84,22 +84,12 @@ ng serve
 - El ordenamiento se implementa con un **pipe personalizado** reutilizable.
 - La UI incluye un modal que muestra el post completo con animación.
 
----
 
-## 📸 Capturas (opcional)
-
-> Puedes agregar aquí capturas de pantalla del listado, filtros, y modal si lo vas a presentar visualmente.
-
----
 
 ## 🧑‍🏫 Autor
 
-**Nombre**: Tu Nombre Aquí  
-**Carrera**: Ingeniería de Sistemas  
-**Correo**: tu.email@ejemplo.com
+**Nombre**: Santiago Suaza  
+**Correo**: santisu204@gmail.com 
 
 ---
 
-## 📄 Licencia
-
-MIT
