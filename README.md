@@ -57,7 +57,7 @@ src/
 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/ssuazam/POST-APP.git
+git clone https://github.com/ssuazam/POSTS-APP.git
 cd POST-APP
 ```
 
