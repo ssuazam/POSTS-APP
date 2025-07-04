@@ -58,7 +58,7 @@ src/
 
 ```bash
 git clone https://github.com/ssuazam/POSTS-APP.git
-cd POST-APP
+cd POSTS-APP
 ```
 
 2. Instala las dependencias
