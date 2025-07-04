@@ -57,8 +57,8 @@ src/
 1. Clona el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/post-explorer-angular.git
-cd post-explorer-angular
+git clone https://github.com/ssuazam/POST-APP.git
+cd POST-APP
 ```
 
 2. Instala las dependencias
