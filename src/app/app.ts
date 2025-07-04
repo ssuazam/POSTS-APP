@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { PostListComponent } from './components/post-list.component';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  standalone: true, // 👈 esto también falta si estás usando standalone
+  imports: [PostListComponent],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrls: ['./app.scss']
 })
 export class App {
   protected title = 'posts-app';

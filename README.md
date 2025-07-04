@@ -1,59 +1,105 @@
-# PostsApp
+# 📝 Post Explorer - Angular + RxJS + TailwindCSS
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+Este proyecto es una aplicación desarrollada en **Angular 14** que permite explorar una lista de publicaciones (`posts`) obtenidas desde una API pública. Incluye funcionalidades de búsqueda, filtrado, ordenamiento, y diseño responsive con TailwindCSS.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Características principales
+
+✅ Consumir una **API pública** (`https://jsonplaceholder.typicode.com/posts`)  
+✅ Listar los posts en pantalla con diseño atractivo  
+✅ Buscar por título con **input reactivo + RxJS + debounce**  
+✅ Filtrar por `User ID`  
+✅ Ordenar por `Título`, `ID` o `User ID`  
+✅ **Pipe personalizado** para ordenamiento  
+✅ **Spinner de carga** mientras se obtiene la información  
+✅ Manejo de errores con mensajes descriptivos  
+✅ Modal para mostrar detalles de cada post  
+✅ Estilos responsivos con **TailwindCSS**
+
+---
+
+## 📦 Estructura del proyecto
+
+```bash
+src/
+│
+├── app/
+│   ├── components/
+│   │   └── post-list/
+│   │       ├── post-list.component.ts        # Lógica principal del componente
+│   │       └── post-list.component.html      # Plantilla con diseño responsive
+│   │
+│   ├── pipes/
+│   │   └── order-by-pipe.ts                  # Pipe personalizado para ordenar los posts
+│   │
+│   └── services/
+│       └── post.service.ts                   # Servicio para consumir la API
+│
+├── styles.scss                                # TailwindCSS
+└── index.html
+```
+
+---
+
+## ⚙️ Tecnologías utilizadas
+
+- **Angular 14**
+- **RxJS** (`BehaviorSubject`, `switchMap`, `debounceTime`, etc.)
+- **TailwindCSS** para diseño responsive
+- **TypeScript**
+- **API pública**: `https://jsonplaceholder.typicode.com/posts`
+
+---
+
+## 🧑‍💻 Instalación y ejecución
+
+1. Clona el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/post-explorer-angular.git
+cd post-explorer-angular
+```
+
+2. Instala las dependencias
+
+```bash
+npm install
+```
+
+3. Ejecuta el proyecto en desarrollo
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+4. Abre el navegador en `http://localhost:4200`
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🧠 Notas técnicas
 
-```bash
-ng generate component component-name
-```
+- El componente usa `BehaviorSubject` + `combineLatest` para combinar búsqueda y filtro de User ID.
+- Las búsquedas se realizan en el servidor utilizando `switchMap`, y los filtros por `userId` se aplican localmente.
+- El ordenamiento se implementa con un **pipe personalizado** reutilizable.
+- La UI incluye un modal que muestra el post completo con animación.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📸 Capturas (opcional)
 
-## Building
+> Puedes agregar aquí capturas de pantalla del listado, filtros, y modal si lo vas a presentar visualmente.
 
-To build the project run:
+---
 
-```bash
-ng build
-```
+## 🧑‍🏫 Autor
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+**Nombre**: Tu Nombre Aquí  
+**Carrera**: Ingeniería de Sistemas  
+**Correo**: tu.email@ejemplo.com
 
-## Running unit tests
+---
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## 📄 Licencia
 
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT
